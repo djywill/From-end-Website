@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="same.css" />
+        <style>
+        #loginmiddle{
+            margin-top: 8%;
+            text-align: center;
+            font-family: SimHei,sans-serif;        
+        }
+        #register{
+            vertical-align: top;
+            display:inline-block;
+            height: 400px;
+            padding-right: 20px;
+            margin-right: 5%;
+        }
+        #login{
+            vertical-align: top;
+            display:inline-block;
+            height: 400px;
+            padding-left: 20px;
+            margin-left: 5%;
+        }
+        p{
+            color:lightslategray;
+        }
+        .item_button{
+            margin-top: 30%;
+        }
+        .registerform{
+            color: gray
+        }
+        .loginservice{
+            color: gray
+        }
+        .button_2{
+            font-family: SimHei,sans-serif;
+            color:white;
+            background-color: black;
+            height:50px;
+            width:200px;
+            margin-top: 12%;
+        }
+        #footer{
+            margin-top:11%; 
+        }
+        </style>
+    </head>
+    <body>
+    <script>
+     function Register()
+     {
+         window.location.href="Register.html"
+     }
+     function CheckInput(inputfieid,helptext)
+        {
+            if(inputfieid.value.length==0)
+            {
+                if(helptext!=null)
+                {
+                    helptext.innerHTML="输入错误";
+                    return false;
+                }
+            }
+            else
+            {
+                if(helptext!=null)
+                {
+                    helptext.innerHTML="";
+                    return true;
+                }
+            }
+        }
+     </script>
+        <div id="container">
+            <div id="header">
+                <div id="search">
+                    <ul id="search_1">
+                        <li><a href="search.html">搜索&nbsp;&nbsp;<img src="search.png" style="margin-bottom:-2px; " /></a></li>
+                        <li><a href="shoppingbag.html">购物袋&nbsp;&nbsp;<img src="shoppingbag.png" style="margin-bottom:-2px; "/></a></li>
+                    </ul>
+                </div>
+                <div id="logo">
+                    <a href="index.html"><img src="logo.PNG" /></a>
+                </div>
+            </div>
+            <div id="loginmiddle">
+                <div id="register">
+                    <div class="registed"><h2>已注册用户</h2></div>
+                    <div class="box">
+                        <p>如您已是已注册会员,请立即登录</p>
+                        <div class="registerform">
+                            <div>
+                                <form>
+                                    <div class="item">用户名:<input type="text" class="username" onblur="CheckInput(this,getElementById('username_msg'));"><span id=username_msg></span></div>    
+                                    <div class="item">密码：&nbsp;<input type="password" class="password" onblur="CheckInput(this,getElementById('username_pwd'));"><span id=username_pwd></span></div>
+                                    <div class="item_button"><a href="#"><input type="button" class="button" value="登录"></a></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="login">
+                    <div class="logged"><h2>新用户</h2></div>
+                    <div class="box">
+                        <p>如需购买,请先注册</p>
+                        <div class="loginsevice">
+                            <div>
+                                <div class="item"><img src="love.png" />&nbsp;&nbsp;&nbsp;保存您心仪的商品</div>
+                                <div class="item"><img src="mark.png" />&nbsp;&nbsp;&nbsp;保存常用地址</div>
+                                <div class="item"><img src="truck.png" />&nbsp;&nbsp;&nbsp;管理订单信息及状态</div>
+                                <form>
+                                     <div class="item_button"><input type="button" class="button_2" value="注册" onclick="Register()"></div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="footer">
+                <div id="menu_2">
+                    <ul class="menu_2">
+                        <li class="menuli_2">
+                        <a href="FAQ.html">FAQ</a>
+                    </li>
+                    <li class="menuli_2">
+                        <a href="Contact.html">联系我们</a>
+                    </li>
+                    <li class="menuli_2">
+                        <a href="Register.html">注册</a>
+                    </li>
+                    <li class="menuli_2">
+                        <a href="Login.html">登录</a>
+                    </li>
+                    <li class="menuli_2">
+                        <a href="Individuation.html">个性化</a>
+                    </li>
+                    <li class="menuli_2">
+                        <a href="Payment.html">支付</a>
+                        </li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+     
+    </body>
+</html>
